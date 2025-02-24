@@ -52,6 +52,82 @@ Voltage Regulator
 ![list (3)](https://github.com/user-attachments/assets/1fb0888d-7614-4cef-ab22-2b991c8a1525)
 
 🖥️ Code & Setup
+[Uplo 
+#include "DHT.h"
+#define DHTPIN D7     // Digital pin connected to the DHT sensor
+#define DHTTYPE DHT11   // DHT 11
+DHT dht(DHTPIN, DHTTYPE);
+int D_1 = D1;
+int D_2 = D2;
+int D_3 = D3;
+int D_4 = D4;
+
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println(F("DHTxx test!"));
+  pinMode(D_1,OUTPUT);
+   pinMode(D_2,OUTPUT);
+    pinMode(D_3,OUTPUT);
+    pinMode(D_4,OUTPUT);
+
+  dht.begin();
+}
+
+void loop() {
+  delay(1000);
+  float h = dht.readHumidity();
+  float t = dht.readTemperature();
+  float f = dht.readTemperature(true);
+  if (isnan(h) || isnan(t) || isnan(f))
+  {
+    Serial.println(F("Failed to read from DHT sensor!"));
+    return;
+  }
+ // float hif = dht.computeHeatIndex(f, h);
+ // float hic = dht.computeHeatIndex(t, h, false);
+  if(t<35.0 ){
+    digitalWrite(D_1,LOW);
+    digitalWrite(D_3,LOW);
+    digitalWrite(D_3,LOW);
+    digitalWrite(D_4,LOW);
+    Serial.print("Fan is off");
+  }
+    if(t>35.0 && t<=45.0){
+   digitalWrite(D_1,HIGH);
+    digitalWrite(D_2,LOW);
+    digitalWrite(D_3,LOW);
+    digitalWrite(D_4,LOW);
+    Serial.print("Fan speed is 25%");
+  }
+    if(t>45.0 && t<=50.0){
+    digitalWrite(D_1,LOW);
+    digitalWrite(D_2,HIGH);
+    digitalWrite(D_3,LOW);
+    digitalWrite(D_4,LOW);
+    Serial.print("Fan speed is 50%");
+  }
+     if(t>50.0 && t<=55.0){
+    digitalWrite(D_1,LOW);
+    digitalWrite(D_2,LOW);
+    digitalWrite(D_3,HIGH);
+    digitalWrite(D_4,LOW);
+    Serial.print("Fan speed is 75%");
+  }
+ if(t>55.0 && t<=60.0){
+    digitalWrite(D_1,LOW);
+    digitalWrite(D_2,LOW);
+    digitalWrite(D_3,LOW);
+    digitalWrite(D_4,HIGH);
+    Serial.print("Fan speed is 100%");
+  }
+  Serial.print(F("  Temperature: "));
+  Serial.print(t);
+  Serial.print("\n");
+    
+
+}
+ading smart_regulator.ino…]()
 
 🚀 Join the revolution in smart home automation! If you love this project, give it a ⭐️ and contribute to making home automation smarter and more accessible!
 
