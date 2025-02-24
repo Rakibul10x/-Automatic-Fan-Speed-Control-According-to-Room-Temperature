@@ -1,6 +1,6 @@
-🌡️ Automatic Fan Speed Control According to Room Temperature
-🚀 A Smart Way to Stay Cool Without Wasting Energy
-🏡 The Problem: A Common Household Dilemma
+#🌡️ Automatic Fan Speed Control According to Room Temperature
+##🚀 A Smart Way to Stay Cool Without Wasting Energy
+🏡 The Problem: A Common Household Dilemma"
 Imagine a hot summer day—you're sitting comfortably in your room, but as the temperature fluctuates, you constantly need to adjust the fan speed manually. Either it's too slow and you're sweating, or it's too fast, wasting unnecessary energy. This not only causes discomfort but also increases electricity bills.
 
 But what if your fan knew exactly when to speed up or slow down automatically based on the room temperature? 🤔
@@ -22,8 +22,9 @@ Our system consists of:
 4️⃣ If the temperature drops, the fan slows down, conserving energy.
 5️⃣ If it rises, the fan speeds up—keeping you cool without manual effort!
 
-🌍 Why This Project Matters for the Future?
-✅ Energy Efficiency – Reducing unnecessary power consumption lowers electricity costs.
+
+🌍 Why This Project Matters for the Future?"
+✅ Energy Efficiency – Reducing unnecessary power consumption lowers electricity costs
 ✅ Home Automation – A step towards a fully automated and IoT-enabled smart home.
 ✅ Sustainability – Small optimizations in energy usage contribute to a greener planet.
 ✅ DIY-Friendly – A perfect project for makers and tech enthusiasts to learn about IoT, PWM, and smart control systems.
