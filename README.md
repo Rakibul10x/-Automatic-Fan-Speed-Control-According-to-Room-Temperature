@@ -1,4 +1,5 @@
 🌡️ Automatic Fan Speed Control According to Room Temperature
+![Automatic fan control according to room temperature](https://github.com/user-attachments/assets/d7975d7b-eca6-4a61-b453-9240df32ef7c)
 
 A Smart Way to Stay Cool Without Wasting Energy!
 
@@ -48,13 +49,10 @@ DIAC DB3
 AC 220V Ceiling Fan
 Voltage Regulator
 5V DC Power Supply
-🖥️ Code & Setup
-The full project source code and setup guide are available in the repository. Just clone, upload, and automate your fan!
+![list (3)](https://github.com/user-attachments/assets/1fb0888d-7614-4cef-ab22-2b991c8a1525)
 
-sh
-Copy
-Edit
-git clone https://github.com/YourUsername/Auto-Fan-Speed-Control.git
+🖥️ Code & Setup
+
 🚀 Join the revolution in smart home automation! If you love this project, give it a ⭐️ and contribute to making home automation smarter and more accessible!
 
 🔗 Let's build the future together! 🌍✨
