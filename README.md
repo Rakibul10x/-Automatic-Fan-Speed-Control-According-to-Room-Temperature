@@ -1,4 +1,5 @@
 🌡️ Automatic Fan Speed Control According to Room Temperature
+
 A Smart Way to Stay Cool Without Wasting Energy!
 🚀 The Problem: A Common Household Dilemma
 Imagine a hot summer day—you're sitting comfortably in your room, but as the temperature fluctuates, you constantly need to adjust the fan speed manually. Either it's too slow and you're sweating, or it's too fast, wasting unnecessary energy. This not only causes discomfort but also increases electricity bills.
