@@ -1,56 +1,92 @@
-#🌡️ Automatic Fan Speed Control According to Room Temperature
-##🚀 A Smart Way to Stay Cool Without Wasting Energy
-🏡 The Problem: A Common Household Dilemma"
-Imagine a hot summer day—you're sitting comfortably in your room, but as the temperature fluctuates, you constantly need to adjust the fan speed manually. Either it's too slow and you're sweating, or it's too fast, wasting unnecessary energy. This not only causes discomfort but also increases electricity bills.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Fan Speed Control</title>
+</head>
+<body>
 
-But what if your fan knew exactly when to speed up or slow down automatically based on the room temperature? 🤔
+<h1>🌡️ Automatic Fan Speed Control According to Room Temperature</h1>
 
-💡 The Smart Solution: Our Intelligent Fan Controller
-Welcome to the future of home automation! This project introduces an Automatic Fan Speed Controller that dynamically adjusts the fan speed based on real-time temperature and humidity levels. It’s a simple yet powerful way to increase comfort, save energy, and make your home smarter.
+<h2>🚀 A Smart Way to Stay Cool Without Wasting Energy</h2>
 
-🛠️ How It Works
-Our system consists of:
+<h3>🏡 The Problem: A Common Household Dilemma</h3>
 
-🔹 A DHT11 Sensor that continuously measures temperature and humidity.
-🔹 An ESP8266 (NodeMCU) that processes sensor data and determines the optimal fan speed.
-🔹 A TRIAC circuit that controls the AC fan speed based on PWM signals.
-🔹 A Relay Module to manage the fan’s power state.
-✨ Key Process Flow:
-1️⃣ The DHT11 sensor captures the room temperature.
-2️⃣ The ESP8266 reads the data and calculates the required fan speed.
-3️⃣ The fan automatically adjusts its speed using a voltage regulator and TRIAC circuit.
-4️⃣ If the temperature drops, the fan slows down, conserving energy.
-5️⃣ If it rises, the fan speeds up—keeping you cool without manual effort!
+<p>Imagine a hot summer day—you're sitting comfortably in your room, but as the temperature fluctuates, you constantly need to adjust the fan speed manually.</p>
 
+<p>Either it's too slow and you're sweating, or it's too fast, wasting unnecessary energy. This not only causes discomfort but also increases electricity bills.</p>
 
-🌍 Why This Project Matters for the Future?"
-✅ Energy Efficiency – Reducing unnecessary power consumption lowers electricity costs
-✅ Home Automation – A step towards a fully automated and IoT-enabled smart home.
-✅ Sustainability – Small optimizations in energy usage contribute to a greener planet.
-✅ DIY-Friendly – A perfect project for makers and tech enthusiasts to learn about IoT, PWM, and smart control systems.
+<p>But what if your fan <b>knew</b> exactly when to speed up or slow down <b>automatically</b> based on the room temperature? 🤔</p>
 
-🔮 Future Enhancements
-🚀 Manual Speed Control – Adding a potentiometer for manual adjustments.
-📶 Bluetooth & Wi-Fi Integration – Controlling fan speed remotely via a mobile app.
-🌐 IoT Connectivity – Integrating with Google Assistant or Alexa for voice control.
-🕹️ Compact Design – Using a smaller microcontroller like ATTiny85 for cost-effective solutions.
+<h3>💡 The Smart Solution: Our Intelligent Fan Controller</h3>
 
-📜 Project Components
-ESP8266 (NodeMCU)
-DHT11 Temperature & Humidity Sensor
-4-Channel Relay Module
-BT136 TRIAC
-Resistor Network (10K, 100K, 300K, 600K)
-DIAC DB3
-AC 220V Ceiling Fan
-Voltage Regulator
-5V DC Power Supply
-![list (3)](https://github.com/user-attachments/assets/2ef2140a-e0dc-45bc-812d-d79848e21df1)
+<p>Welcome to the future of home automation! This project introduces an <b>Automatic Fan Speed Controller</b> that dynamically adjusts the fan speed based on <b>real-time temperature and humidity levels</b>. It’s a simple yet powerful way to <b>increase comfort, save energy, and make your home smarter</b>.</p>
 
-🖥️ Arduino Code
-This code reads temperature data from the DHT11 sensor and adjusts the fan speed accordingly using PWM control via a relay and TRIAC circuit.
+<hr>
 
-#include <DHT.h>
+<h2>🛠️ How It Works</h2>
+
+<ul>
+    <li>🔹 A <b>DHT11 Sensor</b> that continuously measures temperature and humidity.</li>
+    <li>🔹 An <b>ESP8266 (NodeMCU)</b> that processes sensor data and determines the optimal fan speed.</li>
+    <li>🔹 A <b>TRIAC circuit</b> that controls the AC fan speed based on PWM signals.</li>
+    <li>🔹 A <b>Relay Module</b> to manage the fan’s power state.</li>
+</ul>
+
+<p><b>✨ Key Process Flow:</b></p>
+<ol>
+    <li>The <b>DHT11 sensor</b> captures the room temperature.</li>
+    <li>The <b>ESP8266</b> reads the data and calculates the required fan speed.</li>
+    <li>The fan <b>automatically</b> adjusts its speed using a <b>voltage regulator and TRIAC circuit</b>.</li>
+    <li>If the temperature drops, the fan slows down, conserving energy.</li>
+    <li>If it rises, the fan speeds up—keeping you cool without manual effort!</li>
+</ol>
+
+<hr>
+
+<h2>🌍 Why This Project Matters for the Future?</h2>
+
+<ul>
+    <li>✅ <b>Energy Efficiency</b> – Reducing unnecessary power consumption lowers electricity costs.</li>
+    <li>✅ <b>Home Automation</b> – A step towards a fully automated and <b>IoT-enabled</b> smart home.</li>
+    <li>✅ <b>Sustainability</b> – Small optimizations in energy usage contribute to a greener planet.</li>
+    <li>✅ <b>DIY-Friendly</b> – A perfect project for makers and tech enthusiasts to learn about IoT, PWM, and smart control systems.</li>
+</ul>
+
+<hr>
+
+<h2>🔮 Future Enhancements</h2>
+
+<ul>
+    <li>🚀 <b>Manual Speed Control</b> – Adding a <b>potentiometer</b> for manual adjustments.</li>
+    <li>📶 <b>Bluetooth & Wi-Fi Integration</b> – Controlling fan speed remotely via a mobile app.</li>
+    <li>🌐 <b>IoT Connectivity</b> – Integrating with <b>Google Assistant or Alexa</b> for voice control.</li>
+    <li>🕹️ <b>Compact Design</b> – Using a <b>smaller microcontroller like ATTiny85</b> for cost-effective solutions.</li>
+</ul>
+
+<hr>
+
+<h2>📜 Project Components</h2>
+
+<ul>
+    <li><b>ESP8266 (NodeMCU)</b></li>
+    <li><b>DHT11 Temperature & Humidity Sensor</b></li>
+    <li><b>4-Channel Relay Module</b></li>
+    <li><b>BT136 TRIAC</b></li>
+    <li><b>Resistor Network (10K, 100K, 300K, 600K)</b></li>
+    <li><b>DIAC DB3</b></li>
+    <li><b>AC 220V Ceiling Fan</b></li>
+    <li><b>Voltage Regulator</b></li>
+    <li><b>5V DC Power Supply</b></li>
+</ul>
+
+<hr>
+
+<h2>🖥️ Arduino Code</h2>
+
+<pre>
+#include &lt;DHT.h&gt;
 
 #define DHTPIN D4          // DHT11 sensor pin
 #define DHTTYPE DHT11      // DHT Sensor Type
@@ -84,33 +120,37 @@ void loop() {
 
     delay(2000); // Update every 2 seconds
 }
-![Automatic fan control according to room temperature](https://github.com/user-attachments/assets/4c84abc6-b178-4460-a208-6991e5c417f0)
+</pre>
 
-⚙️ Setup Process
-1️⃣ Connect the Hardware:
-Connect DHT11 sensor → VCC to 3.3V, GND to GND, Data to D4 (GPIO2).
-Connect Fan Relay Module → VCC to 5V, GND to GND, IN1 to D1 (GPIO5).
-Connect TRIAC Circuit → Fan load controlled by the relay and TRIAC combination.
-2️⃣ Upload the Code:
-Install the DHT library from the Arduino Library Manager.
-Select NodeMCU 1.0 (ESP-12E) as the board in Arduino IDE.
-Connect your ESP8266 via USB, select the right COM port, and upload the code.
-3️⃣ Testing & Adjustments:
-Open the Serial Monitor (115200 baud) to view temperature readings.
-Adjust temperature thresholds in the code for precise fan speed control.
-For manual adjustments, a potentiometer can be added to override automatic control.
-🚀 Now your fan is fully automated, adjusting speed based on room temperature!
+<hr>
 
-🏆 Project Outcomes
-🌡️ The fan automatically adjusts its speed according to temperature changes, improving comfort and energy efficiency.
-💰 Users experience a seamless, hands-free cooling solution, reducing electricity costs and enhancing sustainability.
-🏡 This project paves the way for smart home automation, offering a practical and scalable solution for modern households.
+<h2>🏆 Project Outcomes</h2>
 
-📌 Contribution & Support
-If you love this project, consider giving it a ⭐ and contributing to its future enhancements!
+<ul>
+    <li>🌡️ The fan <b>automatically adjusts its speed</b> according to temperature changes, improving comfort and energy efficiency.</li>
+    <li>💰 Users experience a seamless, hands-free cooling solution, reducing <b>electricity costs</b> and enhancing sustainability.</li>
+    <li>🏡 This project paves the way for <b>smart home automation</b>, offering a practical and scalable solution for modern households.</li>
+</ul>
 
-📩 Feel free to fork, improve, and submit a pull request to add new features.
+<hr>
 
-For any queries or suggestions, reach out to YourEmail@example.com.
+<h2>📌 Contribution & Support</h2>
 
-🔗 Let's Build the Future Together! 🌍✨
+<p>If you love this project, consider giving it a ⭐ and contributing to its future enhancements!</p>
+
+<p>📩 Feel free to <b>fork</b>, <b>improve</b>, and <b>submit a pull request</b> to add new features.</p>
+
+<p>For any queries or suggestions, reach out to <b><a href="mailto:YourEmail@example.com">YourEmail@example.com</a></b>.</p>
+
+<hr>
+
+<h2>🔗 Let's Build the Future Together! 🌍✨</h2>
+
+<p>🚀 <b>Clone the Repository & Start Building:</b></p>
+
+<pre>
+git clone https://github.com/YourUsername/Auto-Fan-Speed-Control.git
+</pre>
+
+</body>
+</html>
