@@ -97,56 +97,78 @@
 <h2>🖥️ Arduino Code</h2>
 
 <pre>
-#include &lt;DHT.h&gt;
+#include "DHT.h"
 
-#define DHTPIN D4          // DHT11 sensor pin
-#define DHTTYPE DHT11      // DHT Sensor Type
-#define FAN_PIN D1         // Relay or TRIAC control pin
-
+#define DHTPIN D7     // Digital pin connected to the DHT sensor
+#define DHTTYPE DHT11   // DHT 11
 DHT dht(DHTPIN, DHTTYPE);
-int temperature = 0;
+int D_1 = D1;
+int D_2 = D2;
+int D_3 = D3;
+int D_4 = D4;
 
 void setup() {
-    Serial.begin(115200);
+    Serial.begin(9600);
+    Serial.println(F("DHTxx test!"));
+    pinMode(D_1, OUTPUT);
+    pinMode(D_2, OUTPUT);
+    pinMode(D_3, OUTPUT);
+    pinMode(D_4, OUTPUT);
     dht.begin();
-    pinMode(FAN_PIN, OUTPUT);
-    digitalWrite(FAN_PIN, LOW); // Fan initially OFF
 }
 
 void loop() {
-    temperature = dht.readTemperature(); // Read temperature
-    Serial.print("Temperature: ");
-    Serial.print(temperature);
-    Serial.println("°C");
+    delay(1000);
+    float h = dht.readHumidity();
+    float t = dht.readTemperature();
+    float f = dht.readTemperature(true);
 
-    if (temperature >= 30) {
-        analogWrite(FAN_PIN, 255); // Full speed
-    } else if (temperature >= 25) {
-        analogWrite(FAN_PIN, 180); // Medium speed
-    } else {
-        analogWrite(FAN_PIN, 100); // Low speed
-    } else {
-        analogWrite(FAN_PIN, 0); // Fan OFF
+    if (isnan(h) || isnan(t) || isnan(f)) {
+        Serial.println(F("Failed to read from DHT sensor!"));
+        return;
     }
 
-    delay(2000); // Update every 2 seconds
+    if (t < 35.0) {
+        digitalWrite(D_1, LOW);
+        digitalWrite(D_2, LOW);
+        digitalWrite(D_3, LOW);
+        digitalWrite(D_4, LOW);
+        Serial.println("Fan is off");
+    }
+    if (t > 35.0 && t <= 45.0) {
+        digitalWrite(D_1, HIGH);
+        digitalWrite(D_2, LOW);
+        digitalWrite(D_3, LOW);
+        digitalWrite(D_4, LOW);
+        Serial.println("Fan speed is 25%");
+    }
+    if (t > 45.0 && t <= 50.0) {
+        digitalWrite(D_1, LOW);
+        digitalWrite(D_2, HIGH);
+        digitalWrite(D_3, LOW);
+        digitalWrite(D_4, LOW);
+        Serial.println("Fan speed is 50%");
+    }
+    if (t > 50.0 && t <= 55.0) {
+        digitalWrite(D_1, LOW);
+        digitalWrite(D_2, LOW);
+        digitalWrite(D_3, HIGH);
+        digitalWrite(D_4, LOW);
+        Serial.println("Fan speed is 75%");
+    }
+    if (t > 55.0 && t <= 60.0) {
+        digitalWrite(D_1, LOW);
+        digitalWrite(D_2, LOW);
+        digitalWrite(D_3, LOW);
+        digitalWrite(D_4, HIGH);
+        Serial.println("Fan speed is 100%");
+    }
+
+    Serial.print(F("Temperature: "));
+    Serial.print(t);
+    Serial.print("\n");
 }
 </pre>
-
-<hr>
-
-<h2>🏆 Project Outcomes</h2>
-
-<ul>
-    <li>🌡️ The fan <b>automatically adjusts its speed</b> according to temperature changes.</li>
-    <li>💰 Users experience a hands-free cooling solution, reducing <b>electricity costs</b>.</li>
-</ul>
-
-<hr>
-
-<h2>📽️ Project Demos</h2>
-
-<p>🚀 Watch our system in action! (Add YouTube link here)</p>
 
 <hr>
 
