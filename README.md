@@ -7,11 +7,12 @@
 </head>
 <body>
 
-<h1>🌡️ Automatic Fan Speed Control According to Room Temperature</h1>
+<h1 align="center">🌡️ Automatic Fan Speed Control According to Room Temperature</h1>
+<h2 align="center">🚀 A Smart Way to Stay Cool Without Wasting Energy</h2>
 
-<h2>🚀 A Smart Way to Stay Cool Without Wasting Energy</h2>
+<hr>
 
-<h3>🏡 The Problem: A Common Household Dilemma</h3>
+<h2>🏡 The Problem</h2>
 
 <p>Imagine a hot summer day—you're sitting comfortably in your room, but as the temperature fluctuates, you constantly need to adjust the fan speed manually.</p>
 
@@ -19,9 +20,23 @@
 
 <p>But what if your fan <b>knew</b> exactly when to speed up or slow down <b>automatically</b> based on the room temperature? 🤔</p>
 
-<h3>💡 The Smart Solution: Our Intelligent Fan Controller</h3>
+<hr>
+
+<h2>💡 The Smart Solution</h2>
 
 <p>Welcome to the future of home automation! This project introduces an <b>Automatic Fan Speed Controller</b> that dynamically adjusts the fan speed based on <b>real-time temperature and humidity levels</b>. It’s a simple yet powerful way to <b>increase comfort, save energy, and make your home smarter</b>.</p>
+
+<hr>
+
+<h2>🚀 Features</h2>
+
+<ul>
+    <li>✅ <b>Automatic Fan Speed Control</b> – No manual adjustments needed!</li>
+    <li>✅ <b>Real-time Temperature Monitoring</b> – Uses a DHT11 sensor to measure room temperature.</li>
+    <li>✅ <b>Energy Efficient</b> – Reduces unnecessary power consumption.</li>
+    <li>✅ <b>Smart Control</b> – Works seamlessly without human intervention.</li>
+    <li>✅ <b>DIY Friendly</b> – Simple and easy to build for home automation enthusiasts.</li>
+</ul>
 
 <hr>
 
@@ -34,7 +49,9 @@
     <li>🔹 A <b>Relay Module</b> to manage the fan’s power state.</li>
 </ul>
 
-<p><b>✨ Key Process Flow:</b></p>
+<hr>
+
+<h2>✨ Key Process Flow</h2>
 <ol>
     <li>The <b>DHT11 sensor</b> captures the room temperature.</li>
     <li>The <b>ESP8266</b> reads the data and calculates the required fan speed.</li>
@@ -51,7 +68,6 @@
     <li>✅ <b>Energy Efficiency</b> – Reducing unnecessary power consumption lowers electricity costs.</li>
     <li>✅ <b>Home Automation</b> – A step towards a fully automated and <b>IoT-enabled</b> smart home.</li>
     <li>✅ <b>Sustainability</b> – Small optimizations in energy usage contribute to a greener planet.</li>
-    <li>✅ <b>DIY-Friendly</b> – A perfect project for makers and tech enthusiasts to learn about IoT, PWM, and smart control systems.</li>
 </ul>
 
 <hr>
@@ -62,7 +78,6 @@
     <li>🚀 <b>Manual Speed Control</b> – Adding a <b>potentiometer</b> for manual adjustments.</li>
     <li>📶 <b>Bluetooth & Wi-Fi Integration</b> – Controlling fan speed remotely via a mobile app.</li>
     <li>🌐 <b>IoT Connectivity</b> – Integrating with <b>Google Assistant or Alexa</b> for voice control.</li>
-    <li>🕹️ <b>Compact Design</b> – Using a <b>smaller microcontroller like ATTiny85</b> for cost-effective solutions.</li>
 </ul>
 
 <hr>
@@ -75,10 +90,6 @@
     <li><b>4-Channel Relay Module</b></li>
     <li><b>BT136 TRIAC</b></li>
     <li><b>Resistor Network (10K, 100K, 300K, 600K)</b></li>
-    <li><b>DIAC DB3</b></li>
-    <li><b>AC 220V Ceiling Fan</b></li>
-    <li><b>Voltage Regulator</b></li>
-    <li><b>5V DC Power Supply</b></li>
 </ul>
 
 <hr>
@@ -112,7 +123,7 @@ void loop() {
         analogWrite(FAN_PIN, 255); // Full speed
     } else if (temperature >= 25) {
         analogWrite(FAN_PIN, 180); // Medium speed
-    } else if (temperature >= 20) {
+    } else {
         analogWrite(FAN_PIN, 100); // Low speed
     } else {
         analogWrite(FAN_PIN, 0); // Fan OFF
@@ -127,10 +138,15 @@ void loop() {
 <h2>🏆 Project Outcomes</h2>
 
 <ul>
-    <li>🌡️ The fan <b>automatically adjusts its speed</b> according to temperature changes, improving comfort and energy efficiency.</li>
-    <li>💰 Users experience a seamless, hands-free cooling solution, reducing <b>electricity costs</b> and enhancing sustainability.</li>
-    <li>🏡 This project paves the way for <b>smart home automation</b>, offering a practical and scalable solution for modern households.</li>
+    <li>🌡️ The fan <b>automatically adjusts its speed</b> according to temperature changes.</li>
+    <li>💰 Users experience a hands-free cooling solution, reducing <b>electricity costs</b>.</li>
 </ul>
+
+<hr>
+
+<h2>📽️ Project Demos</h2>
+
+<p>🚀 Watch our system in action! (Add YouTube link here)</p>
 
 <hr>
 
